@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./js/main.js" defer type="module"></script>
+    <script src="./js/update.js" defer type="module"></script>
+    <script src="./js/usergallery.js" defer type="module"></script>
+    <script src="./js/modal.js" defer type="module"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+      integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Art Stock</title>
+  </head>
+  <body>
+    <div class="page-container">
+      <div class="upload-bg" id="upload-modal">
+        <div class="upload-photo halepa-cont">
+          <div class="modal-head">
+            <h3 class="modal-head-title">Форма завантаження</h3>
+            <i class="ri-close-line clode-modal" id="close-modal"></i>
+          </div>
+          <!-- <form class="upload-form" name="upload-form"> -->
+          <img id="myimg" height="200" class="img-upload" />
+          <label id="upprogres"></label>
+          <button id="selbtn" class="form-btn">Виберіть файл</button>
+
+          <label>Назва файлу:</label>
+          <div>
+            <input
+              type="text"
+              id="namebox"
+              class="search-area upload-area"
+            /><label id="extlab"></label>
+          </div>
+          <label>Опис фото:</label>
+          <input type="text" id="desbox" class="search-area" />
+          <p class="pidkazka">
+            <i>
+              *опис фотографії враховується при визначенні того, чи потрібно
+              відображати фотографію під час пошуку</i
+            >
+          </p>
+          <button id="upbtn" class="form-btn">Опублікувати</button>
+          <!-- </form> -->
+        </div>
+      </div>
+      <header class="page-header">
+        <div class="container header-container">
+          <nav class="header-nav">
+            <a class="logo" href="./index.html">
+              Art<span class="logo-header">Stock</span></a
+            >
+            <ul class="nav-list">
+              <li class="nav-item">
+                <a class="menu" href="./index.html">Головна</a>
+              </li>
+              <li class="nav-item">
+                <a class="menu active" href="./profile.html">Профіль</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="account-info">
+            <button id="registration" type="button" class="registration-btn">
+              Увійти з Google
+            </button>
+            <ul id="log-in-list" class="log-in-list">
+              <li>
+                <a
+                  href="./profile.html"
+                  id="userName"
+                  class="registration-link"
+                ></a>
+              </li>
+              <li><p class="registration-link">|</p></li>
+              <li><p id="exit" class="registration-link">Вийти</p></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <main>
+        <section id="not-log-in" class="profile-info">
+          <div class="container halepa-cont">
+            <h2 class="halepa">От халепа :(</h2>
+            <p class="halepa-paragraph">Здається ви не авторизувалися!</p>
+          </div>
+        </section>
+        <section id="profile-info" class="profile-info">
+          <div class="container">
+            <div class="pofile-and-upload-container">
+              <div class="profile-name-container">
+                <img
+                  id="userProfilePicture"
+                  alt="profile picture"
+                  class="profile-picture"
+                  width="40"
+                  height="40"
+                />
+                <h1 id="userNameSection" class=""></h1>
+              </div>
+              <button type="button" class="form-btn" id="upload-modal-btn">
+                Завантажити | <i class="ri-add-line"></i>
+              </button>
+            </div>
+          </div>
+          <div class="container img-item-container" id="userGallery"></div>
+        </section>
+      </main>
+      <footer class="footer-style">
+        <div class="container footer-container">
+          <a class="logo footer-logo-bottom" href="./index.html">
+            Art<span class="logo-footer">Stock</span></a
+          >
+          <p class="footer-paragraph">
+            &COPY; Дипломна робота Кацюби Арсена | КН-41, Львів 2024
+          </p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
